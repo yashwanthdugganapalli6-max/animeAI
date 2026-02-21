@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeRecommendAI | Expert Anime Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <main class="container">
+        <header class="hero">
+            <h1 class="glow-text">AnimeRecommendAI</h1>
+            <p class="subtitle">Experience the next generation of anime discovery powered by AI intuition.</p>
+        </header>
+
+        <section class="form-card glass">
+            <form id="recommendation-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="mood">Current Mood</label>
+                        <select id="mood" required>
+                            <option value="" disabled selected>Select your mood</option>
+                            <option value="happy">Happy & Energetic</option>
+                            <option value="sad">Emotional & Melancholic</option>
+                            <option value="motivational">Inspired & Motivational</option>
+                            <option value="chill">Relaxed & Chill</option>
+                            <option value="hyped">Hyped & Thrilled</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="genre">Preferred Genre</label>
+                        <select id="genre" required>
+                            <option value="" disabled selected>Select a genre</option>
+                            <option value="action">Action / Adventure</option>
+                            <option value="romance">Romance / Drama</option>
+                            <option value="sports">Sports / Competition</option>
+                            <option value="fantasy">Fantasy / Isekai</option>
+                            <option value="mystery">Mystery / Psychological</option>
+                            <option value="scifi">Sci-Fi / Mecha</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="length">Length Preference</label>
+                        <select id="length" required>
+                            <option value="short">Short (12-13 eps)</option>
+                            <option value="medium">Medium (24-26 eps)</option>
+                            <option value="long">Long Series (50+ eps)</option>
+                            <option value="movie">Movies</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="rating">Age Rating</label>
+                        <select id="rating" required>
+                            <option value="everyone">Family Friendly</option>
+                            <option value="teen">Teen (13+)</option>
+                            <option value="mature">Mature (17+)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="favorites">Anime You Enjoyed Before</label>
+                    <input type="text" id="favorites" placeholder="e.g. Naruto, Your Name, Death Note..." required>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    <span class="btn-text">Generate Recommendations</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+        </section>
+
+        <section id="results" class="results-container hidden">
+            <h2 class="section-title">Your AI Recommendations</h2>
+            <div id="recommendation-list" class="grid-layout">
+                <!-- Cards will be injected here -->
+            </div>
+
+            <div id="best-pick-container" class="best-pick-wrapper">
+                <!-- Best pick will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
